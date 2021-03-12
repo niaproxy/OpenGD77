@@ -22,7 +22,8 @@
 
 #include <display.h>
 #include <hardware/UC1701.h>
-#include <hardware/UC1701_charset.h>
+//#include <hardware/UC1701_charset.h>
+#include <hardware/UC1701_charset_RU.h>
 #include <settings.h>
 #include <user_interface/uiLocalisation.h>
 

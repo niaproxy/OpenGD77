@@ -5,9 +5,9 @@
 ## if needed, you can specify some options like this:
 ## make -f ../Makefile -j8 RADIO=GD77s VERBOSE=1
 ##
-
+#define LANGUAGE_BUILD_RUSSIAN
 ifndef RADIO
-	RADIO := GD77
+	RADIO := RD5R
 endif
 
 ##

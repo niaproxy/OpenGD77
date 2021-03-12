@@ -18,7 +18,7 @@
  * Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
  */
 #include <user_interface/uiLocalisation.h>
-
+#include <user_interface/languages/russian.h>
 #include <user_interface/languages/english.h>
 #include <user_interface/languages/french.h>
 #include <user_interface/languages/german.h>
@@ -44,6 +44,7 @@
  *
  */
 const stringsTable_t languages[NUM_LANGUAGES]= { 	englishLanguage,
+	                                                russianLanguage,
 													catalanLanguage,
 													danishLanguage,
 													frenchLanguage,
