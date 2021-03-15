@@ -19,13 +19,17 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
  */
-
 #include <display.h>
 #include <hardware/UC1701.h>
-//#include <hardware/UC1701_charset.h>
-#include <hardware/UC1701_charset_RU.h>
 #include <settings.h>
 #include <user_interface/uiLocalisation.h>
+#if defined(LANGUAGE_BUILD_JAPANESE)
+#include <hardware/UC1701_charset_JP.h>
+#elif defined(LANGUAGE_BUILD_RUSSIAN)
+#include <hardware/UC1701_charset_RU.h>
+#else
+#include <hardware/UC1701_charset.h>
+#endif
 
 // number representing the maximum angle (e.g. if 100, then if you pass in start=0 and end=50, you get a half circle)
 // this can be changed with setArcParams function at runtime

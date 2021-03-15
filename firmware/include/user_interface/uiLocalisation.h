@@ -17,10 +17,13 @@
  */
 #ifndef _OPENGD77_UILOCALISATION_H_
 #define _OPENGD77_UILOCALISATION_H_
+//Comment define below for language switch
+#define LANGUAGE_BUILD_RUSSIAN;
+//#define LANGUAGE_BUILD_JAPANESE;
 
-#define LANGUAGE_BUILD_RUSSIAN
-
-#if defined(LANGUAGE_BUILD_RUSSIAN)
+#if defined(LANGUAGE_BUILD_JAPANESE)
+#define NUM_LANGUAGES 2
+#elif defined(LANGUAGE_BUILD_RUSSIAN)
 #define NUM_LANGUAGES 2
 #else
 #define NUM_LANGUAGES 15
@@ -210,7 +213,9 @@ extern const stringsTable_t languages[];
 extern const stringsTable_t *currentLanguage;
 
 enum languageNamesOrder  { 	englishLanguageName = 0,
-#if defined(LANGUAGE_BUILD_RUSSIAN)
+#if defined(LANGUAGE_BUILD_JAPANESE)
+							japaneseLanguageName,
+#elif defined(LANGUAGE_BUILD_RUSSIAN)
 							russianLanguageName,
 #else
 							catalanLanguageName,

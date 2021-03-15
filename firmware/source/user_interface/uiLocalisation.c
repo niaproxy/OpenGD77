@@ -18,7 +18,6 @@
  * Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
  */
 #include <user_interface/uiLocalisation.h>
-#include <user_interface/languages/russian.h>
 #include <user_interface/languages/english.h>
 #include <user_interface/languages/french.h>
 #include <user_interface/languages/german.h>
@@ -34,6 +33,7 @@
 #include <user_interface/languages/dutch.h>
 #include <user_interface/languages/slovenian.h>
 #include <user_interface/languages/portugues_brazil.h>
+#include <user_interface/languages/russian.h>
 
 /*
  * Note.
@@ -43,8 +43,14 @@
  * Add new languages at the end of the list
  *
  */
+#if defined(LANGUAGE_BUILD_JAPANESE)
 const stringsTable_t languages[NUM_LANGUAGES]= { 	englishLanguage,
-	                                                russianLanguage,
+													japaneseLanguage};
+#elif defined(LANGUAGE_BUILD_RUSSIAN)
+const stringsTable_t languages[NUM_LANGUAGES]= { 	englishLanguage,
+													russianLanguage};
+#else
+const stringsTable_t languages[NUM_LANGUAGES]= { 	englishLanguage,
 													catalanLanguage,
 													danishLanguage,
 													frenchLanguage,
@@ -59,4 +65,5 @@ const stringsTable_t languages[NUM_LANGUAGES]= { 	englishLanguage,
 													dutchLanguage,
 													slovenianLanguage,
 													portuguesBrazilLanguage};
+#endif
 const stringsTable_t *currentLanguage;
